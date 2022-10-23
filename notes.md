@@ -62,3 +62,12 @@ Drop all tables then re migrate and seed
 npm run dev
 ```
 Run Vite local server to js build tool - alternatives of mix.
+
+<hr>
+
+## #10) Factory and Seeder - Adding Fake data
+Adding initial or dummy data to the database.
+
+### Learned
+* Factory
+* Seeding
