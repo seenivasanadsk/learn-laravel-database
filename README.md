@@ -1,5 +1,5 @@
 # Learning Laravel Database
-    Learning laravel database, query builder and eloquent model in beginer to super advanced.
+Learning laravel database, query builder and eloquent model in beginer to super advanced.
 
 ## 1. Course Link
 
