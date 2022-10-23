@@ -71,3 +71,12 @@ Adding initial or dummy data to the database.
 ### Learned
 * Factory
 * Seeding
+
+<hr>
+
+## #11) Factory and Seeder - Adding Fake data
+Adding initial or dummy data to the database. #10 and #11 are same
+
+### Learned
+* Factory
+* Seeding
