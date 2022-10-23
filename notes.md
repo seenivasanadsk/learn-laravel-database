@@ -36,6 +36,29 @@ Running raw queries and model
 ## #8) Listeners and Transactions
 learning how to call event in each queries, and how to use db transcation for set of queries exctution, when some execution running if any errors occues in one execution others execution will not working.
 
-### Learnied
+### Learned
 * DB Listeners or Event
 * DB Transactions
+
+<hr>
+
+## #9) Database Migrations
+Learning about how to create migration file and migrate it.
+
+### Learned
+* Vite
+* Migration
+
+### Commends
+```
+php artisan make:migration create_comments_table
+```
+Create migration file
+```
+php artisan migrate:fresh --seed
+```
+Drop all tables then re migrate and seed
+```
+npm run dev
+```
+Run Vite local server to js build tool - alternatives of mix.

@@ -17,12 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    // DB::transaction(function() {
-    //     User::factory(1)->create();
-    //     User::create([]);
-    // });
-    
-    // dump($user);
+    $users = DB::table('users')->get();
+    $comments = DB::table('comments')->get();
+
+    dump($users, $comments);
 
     return view('welcome');
 });
