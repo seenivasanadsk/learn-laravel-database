@@ -80,3 +80,20 @@ Adding initial or dummy data to the database. #10 and #11 are same
 ### Learned
 * Factory
 * Seeding
+
+
+<hr><hr>
+
+## #12) Fetching Data form Database - SELECT
+How to fetch data from database.
+
+### Learned
+* Pluck
+* Where
+* Select
+* First
+* Find
+* Value
+* select as
+* min, max, sum and avg
+* exists and doesntExist
