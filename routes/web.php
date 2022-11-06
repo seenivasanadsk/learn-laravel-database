@@ -17,10 +17,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $users = DB::table('comments')->paginate(4);
-    // $users = DB::table('users')->simplePaginate(3);
+    // $isFulltextAdded = DB::statement('ALTER TABLE comments ADD FULLTEXT fulltext_index (content)');
+    // dd($isFulltextAdded);
+
+    // dd(DB::table('comments')->get());
+
+    // $result = DB::table('comments')
+    //             ->whereRaw("MATCH(content) AGAINST(? IN BOOLEAN MODE)", ['+animi +aut']) // + consists word exists, - consists word not exists
+    //             ->get();
+
+    // $result = DB::table('comments')->where('content', 'like', '%animi%')->get();
     
-    dump($users);
+    // dd($result);
 
     return view('welcome');
 });
