@@ -126,3 +126,9 @@ How to fetch data with condition.
 * whereColumn('column1', '>', 'column2')
 * whereColumn(['column1', '>', 'column2'], ['column3', '>', 'column2'])
 * whereExists(function($query))
+
+## #15) WHERE sql clause - part3
+How to fetch data with condition.
+
+### Learned
+* whereJsonContains('meta->skills', 'Laravel')
