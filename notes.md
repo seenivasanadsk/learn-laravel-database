@@ -139,3 +139,19 @@ How to fetch data in pagination - DOUBT: it's take only first page but how did w
 ### Learned
 * paginate(3)
 * simplePaginate(3)
+
+## #17) Full text
+how to search using full text search
+
+### Learned
+* Full text search
+
+
+## #18) Raw expression
+how to use raw expression, and risk of using raw expression
+### Learned
+* DB::raw
+* selectRaw
+* WhereRaw
+* orderByRaw
+* groupByRaw
