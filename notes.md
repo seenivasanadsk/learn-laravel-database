@@ -166,3 +166,12 @@ how to use groupBy orderBy offset limit
 * limit or take
 * latest
 * inRandomOrder
+
+## #20) Condition cluase and chunking
+how to chunk large number of datas repetedly in specific limit using chuck and chunkById
+chunk is select and show purpose
+chuckById is update purpose
+how to execute some queries using conditon using when
+### Learned
+* Laravel when
+* chunk and chunkById

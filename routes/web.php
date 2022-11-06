@@ -17,25 +17,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    // $users = DB::table('users')->latest()->get();
-    // $users = DB::table('users')->latest()->first();
-    // $users = DB::table('users')->orderBy('name')->get();
-    // $users = DB::table('users')->orderBy('name', 'desc')->get();
-    // $users = DB::table('users')->inRandomOrder()->get();
-    // $users = DB::table('users')->inRandomOrder()->first();
-    // $users = DB::table('users')->inRandomOrder()->first();
+    // $orderBy = 'rating';
+    // $orderBy = null;
 
-    // $comments = DB::table('comments')
-    //             ->selectRaw('count(id) as number_of_5stars_comments, rating')
-    //             ->groupBy('rating')
-    //             ->where('rating', 5)
-    //             ->get();  
-    
-    // $comments = DB::table('comments')->skip(5)->take(5)->get();
-    $comments = DB::table('comments')->limit(5)->offset(5)->get();
+    // $comments = DB::table('comments')->when($orderBy, function ($query) use ($orderBy){
+    //     $query->orderBy($orderBy);
+    // }, function ($query) {
+    //     $query->orderBy("id", 'desc');
+    // })->get();
 
-    // dump($users);
-    dump($comments);
+    // $comments = DB::table('comments')->orderBy('id')->chunk(3, function($comments) {
+    //     foreach ($comments as $comment) {
+    //         DB::table('comments')->whereId($comment->id)->update(['rating' => 0]);
+    //     }
+    // });
+
+    // dump(DB::table('comments')->get());
 
     return view('welcome');
 });
