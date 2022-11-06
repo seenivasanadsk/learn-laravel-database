@@ -17,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $users = DB::table('users')->whereJsonContains('meta->skills', 'Laravel')->get();
+    $users = DB::table('comments')->paginate(4);
+    // $users = DB::table('users')->simplePaginate(3);
     
     dump($users);
 

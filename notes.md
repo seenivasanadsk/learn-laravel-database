@@ -132,3 +132,10 @@ How to fetch data with condition.
 
 ### Learned
 * whereJsonContains('meta->skills', 'Laravel')
+
+## #16) Pagination
+How to fetch data in pagination - DOUBT: it's take only first page but how did we use next pages.
+
+### Learned
+* paginate(3)
+* simplePaginate(3)
