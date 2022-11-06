@@ -17,26 +17,33 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    // $rooms = DB::table('rooms')->get();
-
-    // $rooms = DB::table('rooms')->where('price', 465)->get();
-    // $rooms = DB::table('rooms')->where('price', '=', 465)->get();
+    $rooms = DB::table('rooms')->whereBetween('room_size', [1,3])->get(); // etc whereNotBetween()
+    $rooms = DB::table('rooms')->whereNotIn('room_size', [1,2,3,4])->get(); // etc whereIn()
+    // whereNull('column'), WhereNotNull
     
-    // $rooms = DB::table('rooms')->where('price', '>', 465)->get(); // etc > >= < <=
+    // $rooms = DB::table('rooms')->whereDate('created_at', date('Y-m-d'))->get();
+    // whereMonth('created_at', '5')
+    // whereDay('created_at', '14')
+    // whereYear('created_at', '2022')
+    // whereTime('created_at', '=', '04:23:45')
+    // whereColumn('column1', '>', 'column2')
     
-    // $rooms = DB::table('rooms')->where([
-    //     ['room_size', 1],
-    //     ['price', '<', '200'],
-    // ])->get();
+    // whereColumn([
+    //     ['first_name', '=', 'last_name'],
+    //     ['updated_at', '>', 'created_at']
+    // ])
 
-    // $rooms = DB::table('rooms')->where('price', '>', 465)->orWhere('room_size', 5)->get();
+    $users = DB::table('users')
+        ->whereExists(function($query) {
+            $query->select('id')
+                ->from('reservations')
+                ->whereRaw('reservations.user_id = users.id')
+                ->whereMonth('check_in', '11')
+                ->limit(1);
+        })
+        ->get();
     
-    $rooms = DB::table('rooms')->where('price', '>', 465)->orWhere(function ($query) {
-        $query->where('room_size', 5);
-        $query->where('room_number', 30);
-    })->get();
-
-    dump($rooms);
+    dump($users);
 
     return view('welcome');
 });

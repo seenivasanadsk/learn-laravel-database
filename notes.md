@@ -99,7 +99,7 @@ How to fetch data from database.
 * exists and doesntExist
 
 ## #13) WHERE sql clause - part1
-How to fetch data with using condition.
+How to fetch data with condition.
 
 ### Learned
 * where
@@ -107,3 +107,22 @@ How to fetch data with using condition.
 * multiple where []
 * orWhere
 * multiple orWhere function($query)
+
+## #14) WHERE sql clause - part2
+How to fetch data with condition.
+
+### Learned
+* whereBetween([])
+* whereNotBetween([])
+* whereNotIn([])
+* whereIn([])
+* whereNull('column')
+* whereNotNull('column')
+* whereDate('created_at', '2022-05-23')
+* whereDay('created_at', '23')
+* whereMonth('created_at', '05')
+* whereYear('created_at', '2022')
+* whereTime('created_at', '02:33:12')
+* whereColumn('column1', '>', 'column2')
+* whereColumn(['column1', '>', 'column2'], ['column3', '>', 'column2'])
+* whereExists(function($query))
