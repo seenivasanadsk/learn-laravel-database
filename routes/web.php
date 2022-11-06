@@ -17,22 +17,26 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    // $users    = DB::table('users')->get()->pluck('email');
-    // $users    = DB::table('users')->pluck('email');
-    // $users    = User::pluck('email');
-    // $user     = DB::table('users')->where('email', 'dooley.zoie@example.net')->first();
-    // $user     = DB::table('users')->where('email', 'dooley.zoie@example.net')->value('name');
-    // $user     = DB::table('users')->find(1);
-    // $comments = DB::table('comments')->select('content as comment_content')->get();
-    // $comments = DB::table('comments')->distinct()->pluck('user_id');
-    // $comments = DB::table('comments')->min('user_id');
-    // $comments = DB::table('comments')->max('user_id');
-    // $comments = DB::table('comments')->sum('user_id');
-    // $comments = DB::table('comments')->avg('user_id');
-    // $comments = DB::table('comments')->where('content', 'content')->exists();
-    // $comments = DB::table('comments')->where('content', 'content')->doesntExist();
-    $comments = DB::table('comments')->where('content', 'content')->doesntExist();
-    dump($comments);
+    // $rooms = DB::table('rooms')->get();
+
+    // $rooms = DB::table('rooms')->where('price', 465)->get();
+    // $rooms = DB::table('rooms')->where('price', '=', 465)->get();
+    
+    // $rooms = DB::table('rooms')->where('price', '>', 465)->get(); // etc > >= < <=
+    
+    // $rooms = DB::table('rooms')->where([
+    //     ['room_size', 1],
+    //     ['price', '<', '200'],
+    // ])->get();
+
+    // $rooms = DB::table('rooms')->where('price', '>', 465)->orWhere('room_size', 5)->get();
+    
+    $rooms = DB::table('rooms')->where('price', '>', 465)->orWhere(function ($query) {
+        $query->where('room_size', 5);
+        $query->where('room_number', 30);
+    })->get();
+
+    dump($rooms);
 
     return view('welcome');
 });

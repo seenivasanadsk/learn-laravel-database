@@ -97,3 +97,13 @@ How to fetch data from database.
 * select as
 * min, max, sum and avg
 * exists and doesntExist
+
+## #13) WHERE sql clause - part1
+How to fetch data with using condition.
+
+### Learned
+* where
+* where =, >, >=, <, <=
+* multiple where []
+* orWhere
+* multiple orWhere function($query)
