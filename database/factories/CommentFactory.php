@@ -19,7 +19,8 @@ class CommentFactory extends Factory
     {
         return [
             'content' => fake()->text(500),
-            'user_id' => User::all()->random(1)[0]->id
+            'user_id' => User::all()->random(1)[0]->id,
+            'rating'  => fake()->numberBetween(1,5)
         ];
     }
 }

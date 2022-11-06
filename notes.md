@@ -155,3 +155,14 @@ how to use raw expression, and risk of using raw expression
 * WhereRaw
 * orderByRaw
 * groupByRaw
+
+
+## #19) Group order offset limit
+how to use groupBy orderBy offset limit
+### Learned
+* groupBy
+* orderBy
+* offset or skip
+* limit or take
+* latest
+* inRandomOrder
